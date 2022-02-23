@@ -6,7 +6,9 @@
   "scripts": {
     "build": "npm install",
     "test": "mocha --exit",
-    "start": "node app.js"
+    "start": "node app.js",
+    "docker:build": "docker build -t dogedefi/node-docker-demo:latest . && docker image prune -f",
+    "docker:run": "docker run --expose=3000 -p 8080:3000 -d dogedefi/node-docker-demo"
   },
   "repository": {
     "type": "git",
